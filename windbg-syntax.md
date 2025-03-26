@@ -25,3 +25,9 @@ microsoft windows systemcalls : [https://j00ru.vexillium.org/syscalls/nt/64/]
 
 ### way of a function : 
 createfile ---ntdll---> ntcreatefile ---syscall---> kisystemcall64  and pass 55h and search in kiservicetable 
+
+### system 32 : 
+win32k.sys --> gui functions 
+
+
+### object and handles 
