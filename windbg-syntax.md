@@ -30,4 +30,40 @@ createfile ---ntdll---> ntcreatefile ---syscall---> kisystemcall64  and pass 55h
 win32k.sys --> gui functions 
 
 
-### object and handles 
+
+## terminate process : 
+
+```c++
+
+
+#include <Windows.h>
+#include <stdio.h>
+
+
+int main(int argc , const char * argv[]) {
+
+
+	if (argc <2) {
+
+		printf("usage: kill.exe\n ");
+		return 0;
+	}
+
+	int pid = atoi (argv[1]);
+
+	HANDLE HProcess = OpenProcess(PROCESS_TERMINATE, FALSE , pid);
+
+	if (HProcess)
+	{
+		TerminateProcess(HProcess, 0);
+		CloseHandle(HProcess);
+		printf("success\n");
+	}
+
+	else
+	{
+		printf("failed\n");
+	}
+}
+
+```
