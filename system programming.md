@@ -129,3 +129,95 @@ int main()
 
 ```
 
+
+
+
+
+## process structure :
+### user mode : 
+peb 
+### user mode : 
+EPROCESS
+KPROCESS
+All Process linked as doubly linked-list 
+
+
+
+# PPL protected process level 
+for user admin and privilage SEdebug 
+first microsoft give this for video and audio --> people have to sighn in microxoft and get certificate 
+image has level in process protected 
+protec process is a concept of user mode not in kernel 
+after its be protected process light 
+we cant hijack in these because need to dll sighn 
+### werfaut and secure 
+
+### PDB :
+is a debuger and has symbols and .... and rootkit and in the EProcess  
+
+
+## process protected light 
+0. none
+1. authenticode
+2. codeGen
+3. .
+4. .
+5. .
+6. .
+7. .
+
+ 
+
+
+# set symbol for WINDBG : 
+```
+set _NT_SYMBOL_PATH=srv*C:\Symbols*https://msdl.microsoft.com/download/symbols
+
+```
+
+
+
+## windbg : 
+### first chance :
+
+
+### secend chance :
+
+
+
+
+```
+dt nt!_peb @$peb
+```
+dt ntdll!_EPROCESS
+```
+```
+```
+```
+```
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
