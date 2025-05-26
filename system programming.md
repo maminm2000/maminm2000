@@ -233,6 +233,11 @@ AWRC priject : https://github.com/stdevPavelmc/awrc
 
 
 
+### Wmiprovider :
+WMIProvider refers to a component or class that supplies data to Windows Management Instrumentation (WMI) — a powerful Microsoft technology used for monitoring and managing Windows-based systems.
+
+
+
 
 
 
